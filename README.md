@@ -1,4 +1,4 @@
-# ead comply
+# ead_comply
 
 > now with support for digital objects!
 
@@ -18,9 +18,9 @@ Then you must make sure the script has execution privileges, for most systems th
 
 ## Usage
 
-To use ead_comply simply invoke the script with your ead file as the first argument:
+To use prep_ead simply invoke the script with your ead file as the first argument:
 
-`./ead_comply uac00_0000000_00000_UTC__ead.xml`
+`./prep_ead uac00_0000000_00000_UTC__ead.xml`
 
 The script will create a backup of the input file (file_name.bak) and a new file named with the Archival Resources in Wisconsin style.
 
