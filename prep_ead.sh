@@ -1,5 +1,8 @@
 #! /usr/bin/bash
-# USEAGE: pass input file as argument 1 i.e. './prep_ead.sh INPUT_FILE'. The script will create a backup with tthe name INPUT_FILE.bak and then edit the input file in place. Once the edits are made the input file will be renamed. 
+# @author "Tony Lattis"
+# @email "alattis@wisc.edu"
+
+# USEAGE: pass input file as argument 1 i.e. './prep_ead.sh INPUT_FILE'. The script will create a backup with the name INPUT_FILE.bak and then edit the input file in place. Once the edits are made the input file will be renamed. 
 
 # TODO: this method for obtaining the eadid from the file name may break with accession numbers when used as the identifier
 

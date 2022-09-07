@@ -6,7 +6,7 @@ This script uses sed to make several search and replace edits to finding aids ex
 
 ## Installation
 
-this script is designed to work in the Windows Subsystem for Linus (WSL). To install the subsystem follow these [instructions](https://docs.microsoft.com/en-us/windows/wsl/install). You can use any distribution with a posix compliant shell. If you don't know what that means install the latest Ubuntu distribution. 
+this script is designed to work in the Windows Subsystem for Linus (WSL). To install the subsystem follow these [instructions](https://docs.microsoft.com/en-us/windows/wsl/install). You can use any distribution with a posix compliant shell. If you don't know what that means, install the latest Ubuntu distribution. 
 
 Once you have a working linux instance you can clone this repository with git:
 
@@ -26,4 +26,6 @@ The script will create a backup of the input file (file_name.bak) and a new file
 
 This output file can be directly uploaded to Archival Resources in Wisconsin via SecureFX, however it is a good idea to open up the file in the oxygen xml editor and check for errors against the ead2002 DTD file. 
 
-For the moment, the script will simply write to new files in the current working directory. For this reason it is best to copy your exported file into the same directory as the script and then move the output file to its final destination. 
+For the moment, the script will simply write to new files in the current working directory. For this reason it is best to copy your exported file into the same directory as the script and then move the output file to its final destination to avoid unexpected directory problems. 
+
+NB: WSL will autmatically mount the local C:\ drive at `/mnt/c` this means that you can copy files from anywhere on the C:\ drive to the current directory in wsl with `cp /mnt/c/Users/user_name/path/to/ead .`
