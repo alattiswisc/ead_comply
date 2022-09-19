@@ -1,13 +1,37 @@
 #! /usr/bin/bash
-# @author "Tony Lattis"
-# @email "alattis@wisc.edu"
 
-# USEAGE: pass input file as argument 1 i.e. './prep_ead.sh INPUT_FILE'. The script will create a backup with the name INPUT_FILE.bak and then edit the input file in place. Once the edits are made the input file will be renamed. 
+#==========================================================#
+# prep_ead.sh                                              #
+#                                                          #
+# sed script to make ArchivesSpace EAD exports compliant   #
+# with Archival Resources in Wisconsin formatting          #
+# requirements                                             #
+#                                                          #
+# The script will create a backup with the name            #
+# INPUT_FILE.bak and then edit the input file in place.    #
+# Once the edits are made the input file will be renamed.  #
+#                                                          #
+# @author "Tony Lattis"                                    #
+# @email "alattis@wisc.edu"                                #
+# UW-Archives                                              #
+# September 2022                                           #
+#==========================================================#
 
-# TODO: this method for obtaining the eadid from the file name may break with accession numbers when used as the identifier
+#==========================================================#
+# Configuration                                            #
+#==========================================================#
+
+useage() {
+    echo "Useage:  prep_ead.sh /path/to/file"
+    exit 1
+}
 
 # hard-coded VARS go here
 EAD_PREFIX='uw-ua-'
+
+#==========================================================#
+# Main                                                     #
+#==========================================================#
 
 # machine VARS go here
 INPUT_FILE_NAME=$1
@@ -44,7 +68,6 @@ sed -i "s/onRequest/onrequest/g" $1
 
 # change all type="simple" to linktype="simple"
 sed -i "s/ type=\"simple\"/ linktype=\"simple\"/g" $1
-
 
 # rename file 
 echo "edits complete renaming file: ${EAD_ID}.xml"
