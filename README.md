@@ -28,7 +28,7 @@ The script will create a backup of the input file (file_name.bak) and a new file
 
 This output file can be directly uploaded to Archival Resources in Wisconsin via SecureFX, however it is a good idea to open up the file in the oxygen xml editor and check for errors against the ead2002 DTD file. 
 
-### Detailed instructions
+### Detailed instructions:
 
 The script currently works by editing a file in place in the same directory as the script. To use it, first create a copy of the xml file exported from ArchivesSpace. Any method will do, but to reliably do this from the command line you can issue a `cp` command. Files in the Windows file system can be accessed from the /mnt/c directory in the linux command line. If your current working directory is the location of the script then you can issue:
 
