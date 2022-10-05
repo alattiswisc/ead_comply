@@ -34,7 +34,7 @@ The script currently works by editing a file in place in the same directory as t
 
 `cp /mnt/c/Users/YOUR_USER_NAME/Documents/NAME_OF_EXPORTED_FILE.xml .`  
 
-In the above command `.` will be expanded by the shell to your current directory's name. To check that all has gone well you can issue the `ls` command. If you see both the script (`prep_ead.sh`) and your input file is the list of files returned you are ready to run. 
+In the above command `.` will be expanded by the shell to your current directory's name. To check that all has gone well you can issue the `ls` command. If you see both the script (`prep_ead.sh`) and your input file in the list of files returned you are ready to run. 
 
 NOTE: Do not change the name of the file as exported from ArchivesSpace. The script uses the original name of the file to create the ead id.  
 
