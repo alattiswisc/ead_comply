@@ -35,7 +35,9 @@ EAD_PREFIX='uw-ua-'
 
 # machine VARS go here
 INPUT_FILE_NAME=$1
-EAD_ID=$(echo $INPUT_FILE_NAME | cut -d'_' -f 1 )
+stringZ=$(grep -oP ">uw-ua-.+</eadid>" $1)
+stringY=${stringZ:7}
+EAD_ID=${stringY::-8}
 DATE_NORMAL=$(date +%Y-%m)
 
 # make a backup file
